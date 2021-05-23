@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Car rental</string>
+    <string name="car_rental">Car rental</string>
+    <string name="im_a_client">Im a client</string>
+    <string name="in_a_manager">In a manager</string>
+    <string name="name">Your name</string>
+    <string name="your_surname">Your surname</string>
+    <string name="your_experience">Your experience</string>
+    <string name="register_a_client">Register a client</string>
+    <string name="register">Register</string>
+    <string name="input_name">Input name</string>
+    <string name="input_experience">Input experience</string>
+    <string name="input_surname">Input surname</string>
+    <string name="add_car">Add car</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="model">Model</string>
+    <string name="price">Price</string>
+    <string name="color">Color</string>
+    <string name="year">Year</string>
+    <string name="create_car">Create car</string>
+    <string name="unput_value">Input value</string>
+    <string name="my_rentals">My rentals</string>
+    <string name="welcome_back">Welcome back</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="personal_price_for_u">Personal price for u</string>
+    <string name="select_rental_duration_in_months">Select rental duration in months</string>
+    <string name="make_order">Make order</string>
+    <string name="update_car">Update car</string>
+</resources>

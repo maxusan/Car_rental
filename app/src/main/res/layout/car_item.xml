@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="car"
+            type="com.bananadolphin.carrental.data.Car" />
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+            <TextView
+                android:id="@+id/carManufacturer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="@{`Manufacturer: ` + car.carManufacturer}"/>
+            <TextView
+                android:id="@+id/carModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/carManufacturer"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="@{`Model: ` +car.carModel}"/>
+
+            <TextView
+                android:id="@+id/carPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/carModel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:text="@{`Price for month: ` + car.carPriceForMonth + `$`}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/carYear"
+                app:layout_constraintTop_toBottomOf="@id/carPrice"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@{`Year: ` +car.carYear}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/carColor"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="@{`Color: ` + car.carColor}"
+                app:layout_constraintTop_toBottomOf="@id/carYear"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/deleteCar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/ic_baseline_delete_24"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toTopOf="@id/updateCar"/>
+            <Button
+                android:id="@+id/updateCar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toBottomOf="@id/deleteCar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/ic_baseline_create_24"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

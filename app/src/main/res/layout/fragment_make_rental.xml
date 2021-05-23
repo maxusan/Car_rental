@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="car"
+            type="com.bananadolphin.carrental.data.Car" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+       >
+
+        <LinearLayout
+            android:id="@+id/rentalLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".fragments.MakeRentalFragment"
+            android:clickable="true"
+            android:focusable="true"
+
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="32sp"
+                android:textColor="@color/black"
+                android:text="@{`Manufacturer: ` + car.carManufacturer}"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/carManufacturer"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="32sp"
+                android:textColor="@color/black"
+                android:text="@{`Model: ` +car.carModel}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/carModel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:text="@{`Price for month: ` + car.carPriceForMonth}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/carPrice"
+                android:textSize="32sp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@{`Year: ` +car.carYear}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:textColor="@color/black"
+                android:text="@{`Color: ` + car.carColor}"
+                app:layout_constraintTop_toBottomOf="@id/carYear"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/rentalDurationEditText"
+            android:hint="@string/select_rental_duration_in_months"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/rentalLL"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/priceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@id/rentalDurationEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            android:text="@string/personal_price_for_u"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/makeOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@null"
+            android:textColor="@color/white"
+            android:text="@string/make_order"
+            app:layout_constraintTop_toBottomOf="@id/priceTV"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAllCaps="false"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="car"
+            type="com.bananadolphin.carrental.data.Car" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <EditText
+            android:id="@+id/carManufacturerET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="@string/manufacturer"
+            android:text="@{car.carManufacturer}"/>
+        <EditText
+            android:id="@+id/carModelET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/carManufacturerET"
+            android:hint="@string/model"
+            android:text="@{car.carModel}"/>
+        <EditText
+            android:id="@+id/carYearET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/carModelET"
+            android:hint="@string/year"
+            android:inputType="number"
+            android:text="@{car.carYear}"/>
+        <EditText
+            android:id="@+id/carPriceET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/carYearET"
+            android:hint="@string/price"
+            android:inputType="number"
+            android:text="@{car.carPriceForMonth}" />
+        <EditText
+            android:id="@+id/carColorET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/carPriceET"
+            android:hint="@string/color"
+            android:text="@{car.carColor}"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
